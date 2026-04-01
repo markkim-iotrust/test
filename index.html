@@ -1,0 +1,640 @@
+<!-- D'CENT x Kaia Campaign - Quest Page (PC Version) -->
+<!-- EComposer Custom Code Block -->
+<!-- Images: Replace placeholder src with Shopify CDN URLs -->
+
+<style>
+  .kaia-page {
+    background: #000000;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .kaia-page * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .kaia-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ─── Hero Section ─── */
+  .kaia-hero {
+    position: relative;
+    text-align: center;
+    padding: 80px 0 60px;
+    overflow: hidden;
+  }
+  .kaia-hero-bg {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 900px;
+    object-fit: cover;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .kaia-hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  .kaia-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 260px;
+  }
+  .kaia-logo-img {
+    height: 28px;
+    width: auto;
+  }
+  .kaia-logo-x {
+    width: 10px;
+    height: 10px;
+    opacity: 0.8;
+  }
+  .kaia-hero-slogan {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+  }
+  .kaia-hero-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    color: #BFBFBF;
+    max-width: 600px;
+    margin: 0 auto 24px;
+  }
+  .kaia-hero-date {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    background: rgba(191, 240, 9, 0.12);
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #BFF009;
+  }
+
+  /* ─── CTA Section ─── */
+  .kaia-cta {
+    padding: 80px 0;
+  }
+  .kaia-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+  }
+  .kaia-cta-text {
+    flex: 1;
+    max-width: 480px;
+    text-align: left;
+  }
+  .kaia-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    background: rgba(191, 240, 9, 0.12);
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #BFF009;
+    margin-bottom: 16px;
+  }
+  .kaia-cta-title {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+  }
+  .kaia-cta-benefit {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    color: #BFF009;
+    margin-bottom: 8px;
+  }
+  .kaia-cta-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    color: #BFBFBF;
+  }
+  .kaia-product-card {
+    flex-shrink: 0;
+    width: 360px;
+    background: #111111;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .kaia-product-img {
+    width: 120px;
+    height: auto;
+  }
+  .kaia-product-info {
+    text-align: center;
+    width: 100%;
+  }
+  .kaia-product-name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  .kaia-product-discount {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #BFF009;
+    margin-bottom: 16px;
+  }
+  .kaia-btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    width: 100%;
+    background: #BFF009;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+  }
+  .kaia-btn-primary:hover {
+    opacity: 0.85;
+  }
+
+  /* ─── Quest Section ─── */
+  .kaia-quest {
+    padding: 80px 0;
+  }
+  .kaia-quest-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+  }
+  .kaia-quest-text {
+    flex: 1;
+    max-width: 480px;
+    text-align: left;
+  }
+  .kaia-section-title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+  }
+  .kaia-section-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    color: #BFBFBF;
+    margin-bottom: 32px;
+  }
+  .kaia-btn-outline {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 28px;
+    background: #BFF009;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+  }
+  .kaia-btn-outline:hover {
+    opacity: 0.85;
+  }
+  .kaia-quest-card {
+    flex-shrink: 0;
+    position: relative;
+    width: 280px;
+    height: 440px;
+  }
+  .kaia-quest-img {
+    width: 280px;
+    height: 440px;
+    border-radius: 18px;
+    border: 1.5px solid #FFFFFF;
+    object-fit: cover;
+    filter: drop-shadow(4px 4px 4px rgba(161, 161, 161, 0.25));
+  }
+  .kaia-quest-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    background: linear-gradient(0deg, #000000 -10%, rgba(102, 102, 102, 0.08) 80%);
+    border-radius: 0 0 18px 18px;
+  }
+
+  /* ─── Feature Section (SuperEarn) ─── */
+  .kaia-feature {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .kaia-feature-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .kaia-feature-logo-img {
+    width: 37px;
+    height: 36px;
+  }
+  .kaia-feature-title {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: -0.04em;
+  }
+  .kaia-feature-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    color: #BFBFBF;
+    max-width: 600px;
+    margin: 16px auto 32px;
+  }
+  .kaia-feature-note {
+    max-width: 600px;
+    margin: 32px auto 0;
+    padding: 16px;
+    background: #000000;
+    border: 1px solid #0F0F0F;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    color: #BFBFBF;
+    text-align: center;
+  }
+
+  /* ─── Comparison Section ─── */
+  .kaia-comparison {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .kaia-comparison-title {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: -0.04em;
+    margin-bottom: 16px;
+  }
+  .kaia-comparison-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    color: #BFBFBF;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  .kaia-comparison-grid {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .kaia-compare-card {
+    flex: 1;
+    max-width: 340px;
+    padding: 24px 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .kaia-compare-card--highlight {
+    background: rgba(191, 240, 9, 0.08);
+    border: 1px solid #283200;
+  }
+  .kaia-compare-card--default {
+    background: #000000;
+    border: 1px solid #1A1A1A;
+  }
+  .kaia-compare-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .kaia-compare-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .kaia-compare-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .kaia-compare-label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+  }
+  .kaia-compare-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    background: rgba(191, 240, 9, 0.12);
+    border-radius: 1000px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    color: #BFF009;
+  }
+  .kaia-compare-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .kaia-compare-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .kaia-compare-value {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+  }
+  .kaia-compare-meta {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.04em;
+    color: #BFBFBF;
+  }
+
+  /* ─── Why D'CENT Section ─── */
+  .kaia-why {
+    padding: 80px 0;
+  }
+  .kaia-why-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .kaia-why-grid {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+  .kaia-why-card {
+    flex: 1;
+    max-width: 340px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background: #111111;
+    border-radius: 16px;
+  }
+  .kaia-why-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+  .kaia-why-text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  /* ─── Notice Section ─── */
+  .kaia-notice {
+    padding: 40px 0 60px;
+    background: #181818;
+    margin-top: 80px;
+  }
+  .kaia-notice-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .kaia-notice-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #999999;
+  }
+  .kaia-notice-text p {
+    margin-bottom: 4px;
+  }
+</style>
+
+<div class="kaia-page">
+
+  <!-- Hero Section -->
+  <section class="kaia-hero">
+    <img class="kaia-hero-bg" src="IMAGE_HERO_BG" alt="">
+    <div class="kaia-hero-content kaia-container">
+      <div class="kaia-logos">
+        <img class="kaia-logo-img" src="IMAGE_DCENT_LOGO" alt="D'CENT">
+        <span style="color: #FFFFFF; font-size: 10px;">✕</span>
+        <img class="kaia-logo-img" src="IMAGE_KAIA_LOGO" alt="Kaia">
+      </div>
+      <h1 class="kaia-hero-slogan">Own Your Keys.<br>More cashback.</h1>
+      <p class="kaia-hero-desc">Buy a D'CENT Wallet and earn KAIA USDT cashback.<br>Complete quests for even more rewards.</p>
+      <div class="kaia-hero-date">📅 March 20, 2026 – April 20, 2026</div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="kaia-cta">
+    <div class="kaia-container">
+      <div class="kaia-cta-inner">
+        <div class="kaia-cta-text">
+          <div class="kaia-badge">First 200 Only</div>
+          <h2 class="kaia-cta-title">Buy a Wallet,<br>Get $25 Back!</h2>
+          <p class="kaia-cta-benefit">$25 USDT Cashback</p>
+          <p class="kaia-cta-desc">Purchase a D'CENT Wallet and receive $25 in KAIA USDT — directly to your wallet.</p>
+        </div>
+        <div class="kaia-product-card">
+          <img class="kaia-product-img" src="IMAGE_WALLET" alt="D'CENT Wallet">
+          <div class="kaia-product-info">
+            <div class="kaia-product-name">D'CENT Biometric Wallet</div>
+            <div class="kaia-product-discount">Save 30%</div>
+            <a href="#" class="kaia-btn-primary">$99.00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quest Section -->
+  <section class="kaia-quest">
+    <div class="kaia-container">
+      <div class="kaia-quest-inner">
+        <div class="kaia-quest-text">
+          <h2 class="kaia-section-title">Earn Even More<br>with Kaia Quests</h2>
+          <p class="kaia-section-desc">Complete simple on-chain quests and earn additional KAIA rewards. Connect your D'CENT Wallet to get started with exclusive quest challenges.</p>
+          <a href="#" class="kaia-btn-outline">Join the Quest</a>
+        </div>
+        <div class="kaia-quest-card">
+          <img class="kaia-quest-img" src="IMAGE_QUEST_CARD" alt="Kaia Quest">
+          <div class="kaia-quest-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Section (SuperEarn) -->
+  <section class="kaia-feature">
+    <div class="kaia-container">
+      <div class="kaia-feature-logo">
+        <img class="kaia-feature-logo-img" src="IMAGE_SUPEREARN_ICON" alt="">
+        <span class="kaia-feature-title">SuperEarn</span>
+      </div>
+      <p class="kaia-feature-desc">Stake your KAIA tokens directly from your D'CENT Wallet and earn passive rewards with SuperEarn — no third-party platform needed.</p>
+      <a href="#" class="kaia-btn-outline">Learn More</a>
+      <div class="kaia-feature-note">
+        SuperEarn is available through the D'CENT mobile app. Rewards may vary depending on the staking period and network conditions.
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="kaia-comparison">
+    <div class="kaia-container">
+      <h2 class="kaia-comparison-title">Stop Paying More<br>for USDT Transfers!</h2>
+      <p class="kaia-comparison-desc">Kaia network offers near-zero gas fees and faster transaction speeds compared to traditional networks.</p>
+      <div class="kaia-comparison-grid">
+        <!-- Kaia USDT (Highlighted) -->
+        <div class="kaia-compare-card kaia-compare-card--highlight">
+          <div class="kaia-compare-header">
+            <div class="kaia-compare-name">
+              <img class="kaia-compare-icon" src="IMAGE_KAIA_COIN" alt="Kaia">
+              <span class="kaia-compare-label">Kaia USDT</span>
+            </div>
+            <span class="kaia-compare-chip">Lowest</span>
+          </div>
+          <div class="kaia-compare-stats">
+            <div class="kaia-compare-row">
+              <span class="kaia-compare-value">$0.001</span>
+              <span class="kaia-compare-meta">Gas Fee</span>
+            </div>
+            <div class="kaia-compare-row">
+              <span class="kaia-compare-value">~1 sec</span>
+              <span class="kaia-compare-meta">Speed</span>
+            </div>
+          </div>
+        </div>
+        <!-- Tron USDT -->
+        <div class="kaia-compare-card kaia-compare-card--default">
+          <div class="kaia-compare-header">
+            <div class="kaia-compare-name">
+              <span class="kaia-compare-label">Tron USDT</span>
+            </div>
+          </div>
+          <div class="kaia-compare-stats">
+            <div class="kaia-compare-row">
+              <span class="kaia-compare-value">$1.00 ~ $3.50</span>
+              <span class="kaia-compare-meta">Gas Fee</span>
+            </div>
+            <div class="kaia-compare-row">
+              <span class="kaia-compare-value">~3 min</span>
+              <span class="kaia-compare-meta">Speed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why D'CENT Section -->
+  <section class="kaia-why">
+    <div class="kaia-container">
+      <h2 class="kaia-why-title">Why D'CENT?</h2>
+      <div class="kaia-why-grid">
+        <div class="kaia-why-card">
+          <img class="kaia-why-icon" src="IMAGE_ICON_1" alt="">
+          <span class="kaia-why-text">Biometric authentication for secure transactions without seed phrase risk</span>
+        </div>
+        <div class="kaia-why-card">
+          <img class="kaia-why-icon" src="IMAGE_ICON_2" alt="">
+          <span class="kaia-why-text">Multi-chain support with 3,000+ cryptocurrencies and tokens</span>
+        </div>
+        <div class="kaia-why-card">
+          <img class="kaia-why-icon" src="IMAGE_ICON_3" alt="">
+          <span class="kaia-why-text">Built-in DApp browser for seamless Web3 access directly from your wallet</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notice Section -->
+  <section class="kaia-notice">
+    <div class="kaia-container">
+      <div class="kaia-notice-title">Notice</div>
+      <div class="kaia-notice-text">
+        <p>• This promotion is limited to the first 200 eligible participants.</p>
+        <p>• Cashback will be distributed in USDT on the Kaia network within 14 business days after wallet activation.</p>
+        <p>• To qualify, participants must purchase a D'CENT Biometric Wallet through the official D'CENT store during the event period.</p>
+        <p>• Wallet activation requires downloading the D'CENT mobile app and completing initial setup.</p>
+        <p>• Quest rewards are subject to change based on network conditions and available reward pool.</p>
+        <p>• D'CENT reserves the right to modify or terminate this promotion at any time without prior notice.</p>
+        <p>• This promotion cannot be combined with other ongoing promotions or discount codes.</p>
+        <p>• For inquiries, please contact support@dcentwallet.com</p>
+      </div>
+    </div>
+  </section>
+
+</div>
